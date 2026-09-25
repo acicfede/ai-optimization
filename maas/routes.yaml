@@ -1,0 +1,37 @@
+apiVersion: v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2026-09-17T09:47:07Z"
+    name: maas-chatbot
+    namespace: maas-demo
+    resourceVersion: "1265680391"
+    uid: fa1890f2-a625-449b-94cb-2c1d69a301ed
+  spec:
+    host: maas-chatbot-maas-demo.apps.privateailab.acic.accenture
+    port:
+      targetPort: 8080
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: maas-chatbot
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2026-09-17T09:47:07Z"
+        status: "True"
+        type: Admitted
+      host: maas-chatbot-maas-demo.apps.privateailab.acic.accenture
+      routerCanonicalHostname: router-default.apps.privateailab.acic.accenture
+      routerName: default
+      wildcardPolicy: None
+kind: List
+metadata:
+  resourceVersion: ""
