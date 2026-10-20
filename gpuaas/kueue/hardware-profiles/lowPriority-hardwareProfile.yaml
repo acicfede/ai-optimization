@@ -30,5 +30,5 @@ spec:
   scheduling:
     kueue:
       localQueueName: team-training
-      priorityClass: low-priority
+      priorityClass: training-priority
     type: Queue
