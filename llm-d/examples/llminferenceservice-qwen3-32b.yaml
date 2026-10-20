@@ -3,6 +3,9 @@ kind: LLMInferenceService
 metadata:
   name: qwen3-32b
   namespace: agent
+  annotations:
+    opendatahub.io/hardware-profile-name: highpriority
+    opendatahub.io/hardware-profile-namespace: redhat-ods-applications
   labels:
     kueue.x-k8s.io/queue-name: team-inference
 spec:

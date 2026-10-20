@@ -3,6 +3,9 @@ kind: LLMInferenceService
 metadata:
   name: gpt-oss-20b
   namespace: agent
+  annotations:
+    opendatahub.io/hardware-profile-name: gpu
+    opendatahub.io/hardware-profile-namespace: redhat-ods-applications
 spec:
   model:
     name: gpt-oss-20b
